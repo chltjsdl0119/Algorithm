@@ -14,22 +14,15 @@ public class Main {
 
             int N = Integer.parseInt(reader.readLine());
 
-            List<String> list = new ArrayList<>();
-
             for (int i = 0; i < N; i++) {
-                list.add(reader.readLine());
-            }
+                StringTokenizer tokenizer = new StringTokenizer(reader.readLine(), " ");
 
-            for (String string : list) {
-                String[] strArr = string.split(" ");
+                String str1 = tokenizer.nextToken();
+                String str2 = tokenizer.nextToken();
 
-                String a = strArr[0];
-                String b = strArr[1];
-
-                // 둘 중 하나라도 이미 춤을 추고 있다면
-                if (set.contains(a) || set.contains(b)) {
-                    set.add(a);
-                    set.add(b);
+                if (set.contains(str1) || set.contains(str2)) {
+                    set.add(str1);
+                    set.add(str2);
                 }
             }
 
